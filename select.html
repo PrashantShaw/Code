@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- <input type="file" id="upload" accept="text/csv">
+    <input type="button" value="Send Next Batch of Emails" onClick="window.location.reload(true)"> -->
+
+    <div class="container">
+        <div class="select">
+            <h1>Mass-Mail<br> Dispatcher</h1>
+
+            <input type="file" id="upload" accept="text/csv">
+
+            <!-- <button onClick="window.location.reload(true)">Send Next Batch of Emails</button> -->
+            
+        </div>
+        <div class="mailInfo">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h2>WRITE MAIL HERE</h2>
+            <input type="email" id="from" placeholder="From (email ID)" required>
+            <!-- <input type="email" id="email" placeholder="Your Email" required> -->
+            <input type="text" id="subject" placeholder="Subject" required>
+            <textarea id="msg" rows="12" cols="12" placeholder="Body" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    </div>
+
+    <div class="tables">
+        <div class="valTab">
+            <table id="val">
+                <tr>
+                    <td>
+                        <h2>Valid Emails : <span id="valCount"></span></h2>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="invalTab">
+            <table id="inval">
+                <tr>
+                    <td>
+                        <h2>Invalid Emails : <span id="invalCount"></span></h2>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="copyright">
+            <p> Copyright &copy; PrashantShaw.com</p>
+        </div>
+        <h3>About Me</h3>
+        <ul type="none">
+            <li><a href="https://twitter.com/ImPrashantShaw" class="fa-brands fa-twitter"></a></li>
+            <li><a href="https://www.facebook.com/prashant.shaw.31" class="fa-brands fa-facebook-f"></a></li>
+            <li><a href="https://www.linkedin.com/in/prashant-shaw-37499b208/" class="fa-brands fa-linkedin"></a></li>
+            <li><a href="https://github.com/PrashantShaw?tab=repositories" class="fa-brands fa-github"></a></li>
+        </ul>
+    </div>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="/display.js"></script>
+</body>
+
+</html>
